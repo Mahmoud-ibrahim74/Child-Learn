@@ -11,9 +11,9 @@ using System.Media;
 
 namespace Child_Learn
 {
-    public partial class arabic : Form
+    public partial class baa : Form
     {
-        public arabic()
+        public baa()
         {
             InitializeComponent();
             f_letter.Hide();
@@ -52,7 +52,7 @@ namespace Child_Learn
         {
             System.Media.SoundPlayer player = new System.Media.SoundPlayer();
 
-            player.SoundLocation = Environment.CurrentDirectory + @"\sound\2.wav";
+            player.SoundLocation = Environment.CurrentDirectory + @"\sound\3.wav";
             player.Play(); 
         }
 
@@ -67,7 +67,7 @@ namespace Child_Learn
 
             if(bunifuCheckbox1.Checked)
             {
-                player.SoundLocation = Environment.CurrentDirectory + @"\sound\1.wav";
+                player.SoundLocation = Environment.CurrentDirectory + @"\sound\baa.wav";
                 player.Play(); 
             }
             else
@@ -82,11 +82,11 @@ namespace Child_Learn
 
             if(string.IsNullOrEmpty(f_letter.Text))
             {
-                MessageBox.Show(" (^____^)  اكتب حرف الالــف اولا للأنتـــقال الي الدرس التالي", "خطــأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(" (^____^)  اكتب حرف البــاء اولا للأنتـــقال الي الدرس التالي", "خطــأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if(f_letter.Text != "أ")
+            else if(f_letter.Text != "ب")
             {
-                MessageBox.Show(" (^____^)  اكتب حرف الالــف صحيــح مثل (أ) للأنتـــقال الي الدرس التالي", "خطــأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(" (^____^)  اكتب حرف البــاء صحيــح مثل (ب) للأنتـــقال الي الدرس التالي", "خطــأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             else
@@ -94,7 +94,7 @@ namespace Child_Learn
                 player.SoundLocation = Environment.CurrentDirectory + @"\sound\happy.wav";
                 player.Play(); 
                 MessageBox.Show(" (^____^)    احسنــــت هيا بنا الي الدرس التالي", "تـــم", MessageBoxButtons.OK, MessageBoxIcon.None);
-                new baa().Show();
+                new taa().Show();
                 this.Hide();
             }
         }
